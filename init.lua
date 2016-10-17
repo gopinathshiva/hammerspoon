@@ -338,8 +338,8 @@ function wifi_timer_callback()
   end
 end
 
-local wifi_timer = hs.timer.doEvery((10*60), wifi_timer_callback)
-wifi_timer:start()
+--local wifi_timer = hs.timer.doEvery((10*60), wifi_timer_callback)
+--wifi_timer:start()
 
 function ssidChangedCallback()
     local newSSID = hs.wifi.currentNetwork()
@@ -377,4 +377,11 @@ hs.hotkey.bind({"cmd","ctrl","alt"},"t",function()
     run script file requiredPath
   ]]
   hs.applescript(script)
+end)
+
+
+-- KEYSTROKES
+
+hs.hotkey.bind({"alt"},"d",function()
+  hs.eventtap.keyStrokes(os.date("%B %d, %Y"))
 end)
