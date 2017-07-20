@@ -129,7 +129,7 @@ end)
 
 hs.hotkey.bind({"cmd","alt","ctrl"},"p",function()
   local script = [[
-    set requiredPath to (path to library folder as text) & "Scripts:Open Folder Scripts:Security & Privacy allow.app"
+    set requiredPath to (path to library folder as text) & "Scripts:Open Folder Scripts:Security & Privacy accessibility.app"
     run script file requiredPath
   ]]
   hs.applescript(script)
@@ -392,8 +392,9 @@ end)
 
 keywords = {
     ["date"] = function() return os.date("%B %d, %Y") end,
-    ["name"] = "my name is MISTER",
-    ["a b"] = "abcd"
+    ["name"] = "Gopinath",
+    ["a b"] = "abcd",
+    ["hru"] = "how are you?"
 }
 
 expander = hs.hotkey.bind({"alt"}, "f", nil, function() -- don't start watching until the keyUp -- don't want to capture an "extra" key at the begining
